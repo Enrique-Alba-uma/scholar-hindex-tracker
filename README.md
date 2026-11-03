@@ -17,6 +17,17 @@ The task only runs while your computer is on; with the "start when available" op
 
 The log (`scholar_history.txt`) is written next to the script.
 
+## Bash and Python versions (Linux/macOS)
+
+The same tracker is also available as `scholar-hindex-tracker.sh` (needs only `bash` and `curl`; uses `jq` if installed) and `scholar-hindex-tracker.py` (Python 3 standard library only). Configure them the same way, then run:
+
+```
+./scholar-hindex-tracker.sh
+python3 scholar-hindex-tracker.py
+```
+
+To log every day, add a cron entry (`crontab -e`), e.g. `0 9 * * * /path/to/scholar-hindex-tracker.sh`. Both write the same log format to `scholar_history.txt` next to the script.
+
 ## Author and license
 
 Enrique Alba ([@Enrique-Alba-uma](https://github.com/Enrique-Alba-uma)). MIT License, see [LICENSE](LICENSE).
